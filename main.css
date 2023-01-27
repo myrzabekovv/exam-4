@@ -1,0 +1,172 @@
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 68px;
+  align-items: center;
+  margin-top: 51px;
+}
+
+#contact, .send {
+  border: 2px solid #FFFFFF;
+  width: 293px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+#contact:hover, .send:hover {
+  background-color: #19849B;
+  transition-duration: 300ms;
+}
+
+.overlay {
+  background-color: rgba(25, 132, 155, 0.3);
+
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition-duration: 300ms;
+}
+
+.modal {
+  padding: 20px;
+  height: 586px;
+  width: 656px;
+  background: #272A2F;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Btn {
+  display: flex;
+  justify-content: end;
+}
+
+.modal > button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 300ms;
+}
+
+.modal > span {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.text {
+  width: 200px;
+  height: 20px;
+  padding: 15px;
+}
+
+.email {
+  width: 347px;
+  height: 20px;
+  padding: 15px;
+}
+
+.about {
+  width: 597px;
+  height: 190px;
+  padding: 15px;
+}
+
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.first-line-input {
+  display: flex;
+  gap: 20px;
+}
+
+input {
+  background: #324B53;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.line {
+  width: 559px;
+  background: #19849B;
+  height: 4px;
+}
+
+.contact {
+  width: 559px;
+}
+
+
+@media screen and (max-width: 1040px) {
+  main {
+    flex-direction: column;
+  }
+  .contact {
+    width: 762px;
+  }
+  img {
+    width: 762px;
+    height: 355px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  img {
+    width: 342px;
+    height: 352px;
+  }
+  .contact {
+    width: 341px;
+  }
+  .line {
+    width: 341px;
+  }
+}
+
+@media screen and (max-width: 342px) {
+  img {
+    width: 342px;
+  }
+  .line {
+    width: 342px;
+  }
+  main {
+    width: 342px;
+  }
+}

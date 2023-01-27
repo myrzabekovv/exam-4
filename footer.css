@@ -1,0 +1,34 @@
+footer {
+  height: 205px;
+  background-color: #19849B;
+  max-width: 100%;
+  /* margin-top: 20px; */
+}
+
+.footer-avatar {
+  border-radius: 50%;
+  width: 132px;
+  height: 132px;
+}
+
+.footer-contact > span {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  padding: 20px;
+}
+
+.under-footer {
+  max-width: 100%;
+  height: 44px;
+  background-color: #16758A;
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+}

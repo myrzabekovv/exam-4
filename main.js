@@ -9,20 +9,43 @@ const pics = [
 ]
 
 Object.keys(pics).forEach((key) => {
-  const div = document.createElement('div')
   const img = document.createElement('img')
-  // img.textContent = pics[key]
+
   img.setAttribute('src', `${pics[key]}`)
-  
+
   img.className = 'img'
 
   document.querySelector('section').append(img)
 
-  const openImg = document.querySelector('.openImg')
-  const closeImg = document.querySelector('closeImg')
-  const overlayImg = document.querySelector('overlayImg')
+
+  const openImg = document.querySelector('.overlay-img')
+  const closeImgButton = document.querySelector('.close-btn-img')
+
+  img.addEventListener('click', () => {
+    openImg.classList.add('open2')
+  })
+
+  closeImgButton.addEventListener('click', () => {
+    openImg.classList.remove('open2')
+  })
+
 })
 
+
+// const imgGallery = document.querySelector('section')
+// pics.forEach((url) => {
+//   const a = document.createElement('a')
+//   imgGallery.append(a)
+//   const img = document.createElement('img')
+//   const closeImgButton = document.createElement('button')
+
+//   a.append(closeImgButton)
+//   a.append(img)
+
+//   img.setAttribute('src', url)
+//   img.className('img')
+//   a.className('')
+// })
 
 
 
@@ -36,4 +59,19 @@ openBtn.addEventListener('click', () => {
 
 closeBtn.addEventListener('click', () => {
   overlay.classList.remove('open')
+})
+
+const send = document.querySelector('.send')
+
+const name = document.querySelector('.text')
+const email = document.querySelector('.email')
+const about = document.querySelector('.about')
+
+send.addEventListener('click', () => {
+  let getMessage = {
+    name: name.value,
+    email: email.value,
+    texts: about.value
+  }
+  console.log(getMessage)
 })

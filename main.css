@@ -3,10 +3,16 @@ main {
   flex-direction: row;
   gap: 68px;
   align-items: center;
-  margin-top: 51px;
+  margin-top: 70px;
 }
 
-#contact, .send {
+
+.img1 {
+  object-fit: cover;
+}
+
+
+#contact, .send, .close-btn-img {
   border: 2px solid #FFFFFF;
   width: 293px;
   height: 50px;
@@ -18,7 +24,12 @@ main {
   transition-duration: 300ms;
 }
 
-#contact:hover, .send:hover {
+.close-btn-img {
+  width: 106px;
+  height: 38px;
+}
+
+#contact:hover, .send:hover, .close-btn-img:hover {
   background-color: #19849B;
   transition-duration: 300ms;
 }
@@ -48,6 +59,8 @@ main {
   height: 586px;
   width: 656px;
   background: #272A2F;
+
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -128,6 +141,14 @@ h2 {
   height: 4px;
 }
 
+#closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+}
+
 .contact {
   width: 559px;
 }
@@ -136,26 +157,61 @@ h2 {
 @media screen and (max-width: 1040px) {
   main {
     flex-direction: column;
+    padding: 50px 10px 0 10px;
   }
   .contact {
-    width: 762px;
+    width: 100%
   }
-  img {
-    width: 762px;
+  .img1 {
+    width: 100%;
     height: 355px;
+    object-fit: cover;
   }
 }
 
 @media screen and (max-width: 760px) {
-  img {
+  /* .img1 {
     width: 342px;
     height: 352px;
   }
   .contact {
     width: 341px;
-  }
+  } */
   .line {
     width: 341px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .modal {
+    width: 500px;
+  }
+  .about {
+    width: 94%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .modal {
+    width: 400px;
+  }
+  .about {
+    width: 94%;
+  }
+  .text {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 456px) {
+  .modal {
+    width: 300px;
+  }
+  .about {
+    width: 94%;
+  }
+  .text, .email {
+    width: 116px;
   }
 }
 

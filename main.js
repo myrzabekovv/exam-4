@@ -21,8 +21,13 @@ Object.keys(pics).forEach((key) => {
   const openImg = document.querySelector('.overlay-img')
   const closeImgButton = document.querySelector('.close-btn-img')
 
-  img.addEventListener('click', () => {
+  img.addEventListener('click', (e) => {
     openImg.classList.add('open2')
+    const showImg = document.createElement('img')
+    console.log(e.target.getAttribute('src'))
+    showImg.setAttribute('src', e.target.getAttribute('src'))
+    showImg.className = 'modal-img'
+    document.querySelector('.overlay-img').append(showImg)
   })
 
   closeImgButton.addEventListener('click', () => {

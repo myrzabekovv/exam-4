@@ -8,30 +8,36 @@ const pics = [
   'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
 ]
 
-Object.keys(pics).forEach((key) => {
+Object.keys(pics).forEach((key, index) => {
+  const div = document.createElement('div') 
   const img = document.createElement('img')
 
   img.setAttribute('src', `${pics[key]}`)
 
   img.className = 'img'
+  div.className = 'divImg'
 
-  document.querySelector('section').append(img)
+  document.querySelector('section').append(div)
+  document.querySelector('.divImg').append(img)
+  
 
 
   const openImg = document.querySelector('.overlay-img')
   const closeImgButton = document.querySelector('.close-btn-img')
+  
 
   img.addEventListener('click', (e) => {
     openImg.classList.add('open2')
     const showImg = document.createElement('img')
-    console.log(e.target.getAttribute('src'))
     showImg.setAttribute('src', e.target.getAttribute('src'))
     showImg.className = 'modal-img'
     document.querySelector('.overlay-img').append(showImg)
-  })
 
-  closeImgButton.addEventListener('click', () => {
-    openImg.classList.remove('open2')
+    closeImgButton.addEventListener('click', () => {
+      openImg.classList.remove(`open2`)
+      showImg.remove()
+    })
+
   })
 
 })

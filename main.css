@@ -11,6 +11,10 @@ main {
   object-fit: cover;
 }
 
+#contact {
+  letter-spacing: 1.5px;
+}
+
 
 #contact, .send, .close-btn-img {
   border: 2px solid #FFFFFF;
@@ -79,6 +83,7 @@ main {
 }
 
 .open {
+  z-index: 1;
   opacity: 1;
   visibility: visible;
   transition-duration: 300ms;
@@ -154,10 +159,10 @@ h2 {
 }
 
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1064px) {
   main {
     flex-direction: column;
-    padding: 50px 10px 0 10px;
+    /* padding: 50px 10px 0 10px; */
   }
   .contact {
     width: 100%
@@ -178,13 +183,13 @@ h2 {
     width: 341px;
   } */
   .line {
-    width: 341px;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 735px) {
   .modal {
-    width: 500px;
+    width: 100%;
   }
   .about {
     width: 94%;
@@ -193,36 +198,25 @@ h2 {
 
 @media screen and (max-width: 570px) {
   .modal {
-    width: 400px;
+    width: 100%;
   }
   .about {
     width: 94%;
   }
   .text {
-    width: 140px;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 456px) {
   .modal {
-    width: 300px;
+    width: 100%;
   }
   .about {
     width: 94%;
   }
   .text, .email {
-    width: 116px;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 342px) {
-  img {
-    width: 342px;
-  }
-  .line {
-    width: 342px;
-  }
-  main {
-    width: 342px;
-  }
-}

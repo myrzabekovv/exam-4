@@ -8,17 +8,31 @@ const pics = [
   'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
 ]
 
-Object.keys(pics).forEach((key, index) => {
+pics.forEach((src) => {
   const div = document.createElement('div') 
   const img = document.createElement('img')
+  const scaleIcon = document.createElement('img')
+  const loading = document.createElement('img')
 
-  img.setAttribute('src', `${pics[key]}`)
+  img.setAttribute('src', src)
+  scaleIcon.setAttribute('src', './Vector (7).png')
+  loading.setAttribute('src', './Group 1.png')
 
   img.className = 'img'
   div.className = 'divImg'
+  scaleIcon.className = 'imgHover'
+  loading.className = 'loading'
 
+  setTimeout(() => {
+    loading.style.display = 'none'
+  }, 500)
+
+  div.append(img, loading, scaleIcon,)
+  // div.append(img)
   document.querySelector('section').append(div)
-  document.querySelector('.divImg').append(img)
+
+  // document.querySelector('section').append(div)
+  // document.querySelector('.divImg').append(img)
   
 
 
@@ -26,10 +40,11 @@ Object.keys(pics).forEach((key, index) => {
   const closeImgButton = document.querySelector('.close-btn-img')
   
 
-  img.addEventListener('click', (e) => {
+  div.addEventListener('click', () => {
     openImg.classList.add('open2')
     const showImg = document.createElement('img')
-    showImg.setAttribute('src', e.target.getAttribute('src'))
+    const currentImage = div.querySelector('img')
+    showImg.setAttribute('src', currentImage.getAttribute('src'))
     showImg.className = 'modal-img'
     document.querySelector('.overlay-img').append(showImg)
 
@@ -41,23 +56,6 @@ Object.keys(pics).forEach((key, index) => {
   })
 
 })
-
-
-// const imgGallery = document.querySelector('section')
-// pics.forEach((url) => {
-//   const a = document.createElement('a')
-//   imgGallery.append(a)
-//   const img = document.createElement('img')
-//   const closeImgButton = document.createElement('button')
-
-//   a.append(closeImgButton)
-//   a.append(img)
-
-//   img.setAttribute('src', url)
-//   img.className('img')
-//   a.className('')
-// })
-
 
 
 const openBtn = document.querySelector('#contact')

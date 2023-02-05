@@ -11,29 +11,21 @@ const pics = [
 pics.forEach((src) => {
   const div = document.createElement('div') 
   const img = document.createElement('img')
-  const scaleIcon = document.createElement('img')
   const loading = document.createElement('img')
 
   img.setAttribute('src', src)
-  scaleIcon.setAttribute('src', './Vector (7).png')
   loading.setAttribute('src', './Group 1.png')
 
   img.className = 'img'
   div.className = 'divImg'
-  scaleIcon.className = 'imgHover'
   loading.className = 'loading'
 
   setTimeout(() => {
     loading.style.display = 'none'
-  }, 500)
+  }, 1000)
 
-  div.append(img, loading, scaleIcon,)
-  // div.append(img)
+  div.append(img, loading,)
   document.querySelector('section').append(div)
-
-  // document.querySelector('section').append(div)
-  // document.querySelector('.divImg').append(img)
-  
 
 
   const openImg = document.querySelector('.overlay-img')

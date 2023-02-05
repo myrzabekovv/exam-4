@@ -95,6 +95,9 @@ section {
 
 .divImg:hover::after {
   background: rgba(25, 132, 155, 0.3);
+  background-image: url(./Vector\ \(7\).png);
+  background-repeat: no-repeat;
+  background-position: center;
   z-index: 1;
 }
 
@@ -133,17 +136,6 @@ section {
   opacity: 1;
   visibility: visible;
   transition-duration: 300ms;
-}
-
-.imgHover {
-  position: relative;
-  top: -60%;
-  left: 50%;
-  visibility: hidden;
-}
-
-.imgHover:hover {
-  visibility: visible;
 }
 
 .loading {
@@ -198,12 +190,18 @@ section {
     margin-bottom: 0px;
   }
   .overlay-img > img {
-    width: 360px;
-    height: 360px;
+    width: 70%;
+    height: 40%;
+  }
+  .modal-img {
+    width: 70%;
+    margin-bottom: 10px;
   }
   .close-btn-img {
-    top: -46%;
-    left: 117%;
+    /* position: relative; */
+    top: 0;
+    left: 0;
   }
+  
 }
 
